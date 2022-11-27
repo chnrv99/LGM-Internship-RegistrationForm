@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function display() {
+            document.getElementById("displayarea").innerHTML = "Registered Successfully! <br><br> First Name: " + document.getElementById("fname").value;
+            document.getElementById("fname").value = "";
+            document.getElementById("displayarea1").innerHTML = "Last Name: " + document.getElementById("lname").value;
+            document.getElementById("lname").value = "";
+            document.getElementById("displayemail").innerHTML = "Email: " + document.getElementById("email").value;
+            document.getElementById("email").value = "";
+
+
+            var ele = document.getElementsByName("fav_language");
+
+            for (i = 0; i < ele.length; i++) {
+                if (ele[i].checked)
+                    document.getElementById("displayjava").innerHTML = "Language Selected: " + ele[i].value;
+            }
+
+            var ele = document.getElementsByName("fav_language1");
+
+            for (i = 0; i < ele.length; i++) {
+                if (ele[i].checked)
+                    document.getElementById("displaygender").innerHTML = "Gender Selected: " + ele[i].value;
+            }
+
+
+
+
+        }
+    </script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <header>
+        <h1><span id="Title1">Registration Form</h1></span>
+        <div class="navbar">
+            <div class="home">Home </div>
+            <div class="register">Register</div>
+            <div class="contact">Contact</div>
+            <div class="about">About</div>
+        </div>
+    </header>
+    <div class="container">
+
+        <div class="wrapper1">
+            <!-- <br>
+            <br>
+            <form>
+
+                <label class="font1"> Firstname: </label>
+                <input type="text" name="firstname" id="fname" size="15" /> <br> <br>
+
+                <label class="font1"> Lastname: </label>
+                <input type="text" name="lastname" id="lname" size="15" /> <br> 
+
+                <label class="font2">Choose your Gender:</label>
+
+                
+                    <input type="radio" id="female" name="fav_language1" value="Female">
+                    <label for="html" class="font2">Female</label><br>
+                    <input type="radio" id="male" name="fav_language1" value="Male">
+                    <label for="css" class="font2">Male</label><br>
+
+                
+                <br>
+                <label class="font3">Email:</label>
+                <input type="email" id="email" name="email" /> <br>
+                
+
+                <label>
+
+                    <p class="font4">Choose your favorite Web language:</p>
+
+                    <form>
+                        <input type="radio" id="html" name="fav_language" value="HTML">
+                        <label for="html" class="font4">HTML</label><br>
+                        <input type="radio" id="css" name="fav_language" value="CSS">
+                        <label for="css" class="font4">CSS</label><br>
+                        <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+                        <label for="javascript" class="font4">JavaScript</label>
+                    </form>
+                    <input type="button" value="Submit" name="submit" id="submit" class="btn" onClick="display()" /> -->
+
+<!--  -->
+                    <form>
+                        First name: <input type="text" name="fname" id="fname"><br />
+                        Last name: <input type="text" name="lname" id="lname"><br />
+                       
+                        
+                        Email: <input type="email" name="email" id="email"><br />
+        
+        
+                        Gender : <input type="radio" name="fav_language1" id="Female" value="Female">
+                        <label for="date">Female</label>
+                        <input type="radio" name="fav_language1" id="Male" value="Male">
+                        <label for="date">Male</label><br />
+                        Favourite Language:
+                        <input type="radio" id="html" name="fav_language" value="HTML">
+                        <label for="html">HTML</label>
+                        <input type="radio" id="css" name="fav_language" value="CSS">
+                        <label for="css">CSS</label>
+                        <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+                        <label for="javascript">JavaScript</label><br>
+        
+                        
+        
+                        <div class="btn">
+                            <input type="button" value="Submit" onClick="display()">
+                        </div>
+                    </form>
+                    <!--  -->
+        </div>
+
+
+        <div class="wrapper2">
+            <div id="displayarea" class="font5"></div>
+            <div id="displayarea1" class="font5"></div>
+            <div id="displaygender" class="font5"></div>
+            <div id="displayemail" class="font5"></div>
+            <div id="displayjava" class="font5"></div>
+        </div>
+    </div>
+
+</body>
+
+</html>
